@@ -1,0 +1,13 @@
+<a [routerLink] = "['/recipes', index]" class = 'list-group-item clearfix'
+    routerLinkActive = 'active'
+    style = 'cursor:pointer'>
+    <div class="pull-left">
+        <!-- string binding -->
+        <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+        <p class="list-group-item-text">{{recipe.description}}</p>
+    </div>
+    <span class="pull-right">
+        <!-- property binding (could use string binding as well, no problem) -->
+        <img [src]='recipe.imagePath' alt="{{recipe.name}}" class="img-responsive" style='max-height: 50px;'>
+    </span>
+</a>
